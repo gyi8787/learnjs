@@ -18,5 +18,17 @@ let result = text.toLowerCase();
 let te = "       Hello World!        ";
 let ri = text.trim();
 //<------------------------------------------------------------------->
+//interview question
+var ans="5"+1;  //51
+var my=1+"5";   //15
+var kon="5"-1;  //4(bug)
+var mkon=5-"1";  //4
+console.log(null*5); //0
+console.log(null*"5"); //0
+console.log("ten"*3);
+console.log("10"*3);
+
+
+
 
 
