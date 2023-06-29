@@ -25,8 +25,8 @@ var kon="5"-1;  //4(bug)
 var mkon=5-"1";  //4
 console.log(null*5); //0
 console.log(null*"5"); //0
-console.log("ten"*3);
-console.log("10"*3);
+console.log("ten"*3);  //Nan
+console.log("10"*3);   //30
 
 
 
