@@ -14,6 +14,9 @@ let res =str.substring(0, 1);
 let resu =str.substring(str.length - 1);
 //<------------------------------------------------------------------->
 let text = "Hello World!";
-let result = text.toLocaleLowerCase();
-console.log(result);
+let result = text.toLowerCase();
+let te = "       Hello World!        ";
+let ri = text.trim();
+//<------------------------------------------------------------------->
+
 
