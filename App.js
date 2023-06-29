@@ -1,3 +1,5 @@
+// <-----SIMPLE FUNCTION IN JAVASCRIPT 12 FEB------->
+
 //terminal per run kerne ke liye node app.js likhna
 function add(a,b)
 {
