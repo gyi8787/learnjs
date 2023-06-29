@@ -1,0 +1,7 @@
+VS CODE GIT
+1.node app.js se hum file terminal per run kerte h
+2. git me push kerne ke liye
+a. git add .
+b. git commit -m "msg"
+c. git push
+3.cls se scree clear kerte h
