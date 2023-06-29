@@ -1,7 +1,7 @@
 let a=["hello",1,true];
-console.log(a);
+// console.log(a);
 a.pop(); // remove last element of an array
-console.log(a);
+// console.log(a);
 a.push("'guys")   //ye last me add kerta h
 a.unshift("wlcm")  //ye starting me add kerta h
 a.shift();       // ye starting vala element remove kerta h
@@ -13,5 +13,7 @@ let arr=[
     ['1','2','3'],
     [3,4,5]
 ]
-console.log(arr);
-console.table(arr);
+// console.log(arr);
+// console.table(arr);
+
+
