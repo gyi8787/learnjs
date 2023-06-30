@@ -16,4 +16,9 @@ let arr=[
 // console.log(arr);
 // console.table(arr);
 
-
+// ===============================================================
+const ab=['1','2','3'];
+a.slice(0,1);//(stratingindex,no of element jo delete kerne h)
+ // does not change in original array
+a.splice(0,1);
+a.unshift("boy");
