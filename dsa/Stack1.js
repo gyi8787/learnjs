@@ -63,17 +63,17 @@ public static void main(String[] args)
 
  public static boolean check( Stack<Character>st,char bracket)
  {
- if(st.size()==0)
-     return false;
- else if (st.peek()!=bracket)
- {
-     return false;
- }
- else
- {
-     st.pop();
-     return true;
- }
+        if(st.size()==0)
+            return false;
+         else if (st.peek()!=bracket)
+        {
+            return false;
+        }
+        else
+        {
+             st.pop();
+             return true;
+        }
  }
  public static void main(String[] args)
  {
