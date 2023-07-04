@@ -23,12 +23,16 @@ var ans="5"+1;  //51
 var my=1+"5";   //15
 var kon="5"-1;  //4(bug)
 var mkon=5-"1";  //4
-console.log(null*5); //0
-console.log(null*"5"); //0
-console.log("ten"*3);  //Nan
-console.log("10"*3);   //30
+// console.log(null*5); //0
+// console.log(null*"5"); //0
+// console.log("ten"*3);  //Nan
+// console.log("10"*3);   //30
 
-
+// =============================>split methode<===============
+var str="Hello my name is Deepak"
+console.log(str);
+var a=str.split(" ");
+console.log(a);
 
 
 
