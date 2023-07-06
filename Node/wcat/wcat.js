@@ -53,9 +53,40 @@ for(let i=0;i<filesArr.length;i++)
     let fileContent=fs.readFileSync(filesArr[i]);
     content+=fileContent+"\n"; // jo bhi content aata jayega wo isme append hota jayega
 }
-console.log(content);
-let contentArr=content.split("\n"); 
+// console.table(content);
+let contentArr=content.split("\r\n"); 
 // =================================================================
 // const fs=require("fs");
 // let inputArr=process.argv.slice(2);
 // console.log(inputArr);  //node wcat.js -n f1.txt
+
+//================================>10 MARCH <=======================
+let isPresent=optionsArr.includes("-s");
+if(isPresent)
+{
+    for(let i=1;i<contentArr.length;i++)
+    {
+        if(contentArr[i]==""&&contentArr[i-1]=="")
+        {
+            contentArr[i]=null;
+        }
+        else if(contentArr[i]==""&& contentArr[i-1]==null)
+        {
+            contentArr[i]=null;
+        }
+    }
+    
+    let tempArr=[];
+//push everything in tempArr except null
+for(let i=0;i<contentArr.length;i++)
+{
+    if(contentArr[i]!=null)
+    {
+        tempArr.push(contentArr[i]);
+    }
+}
+console.log("data after removing extra lines\n",tempArr);
+}
+
+
+console.table(contentArr);
