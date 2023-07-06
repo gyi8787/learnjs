@@ -51,7 +51,7 @@ let content="";
 for(let i=0;i<filesArr.length;i++)
 {
     let fileContent=fs.readFileSync(filesArr[i]);
-    content+=fileContent+"\n"; // jo bhi content aata jayega wo isme append hota jayega
+    content+=fileContent+"\r\n"; // jo bhi content aata jayega wo isme append hota jayega
 }
 // console.table(content);
 let contentArr=content.split("\r\n"); 
