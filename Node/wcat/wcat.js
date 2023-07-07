@@ -43,6 +43,7 @@ for(let i=0;i<filesArr.length;i++)
     {
         console.log("files does not exit");
         return;
+        // process.exit(); bhi ker skte ho
     }
 }
 //===================================>content read and appending starts <=======================//
