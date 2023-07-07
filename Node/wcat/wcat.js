@@ -47,6 +47,7 @@ for(let i=0;i<filesArr.length;i++)
 }
 //===================================>content read and appending starts <=======================//
 //content read and appending starts
+let tempArr=[];
 let content="";
 for(let i=0;i<filesArr.length;i++)
 {
@@ -76,7 +77,7 @@ if(isPresent)
         }
     }
     
-    let tempArr=[];
+  
 //push everything in tempArr except null
 for(let i=0;i<contentArr.length;i++)
 {
@@ -90,3 +91,52 @@ console.log("data after removing extra lines\n",tempArr);
 
 
 console.table(contentArr);
+
+// ====================================================
+
+// kahani -n,-b,-s ki ,ki  kaun phle aayega
+contentArr=tempArr;
+let indexOfN=optionsArr.indexOf("-n");
+let indexOfB=optionsArr.indexOf("-b");
+// if -n or -b is not found ,-1 is returned 
+let finalOption="";
+// if both -n and -b are present 
+    if(indexOfN!=-1 && indexOfB)
+      {
+         finalOption="-n";
+      }
+    else{
+       finalOption="-b";
+     }
+
+
+     if(finalOption=="-n")
+     {
+        modifiContentByN();
+     }
+     else if(finalOption=="-b")
+     {
+        modifiContentByB();
+     }
+     //calling of function by evaluatinf finalOption
+     function modifiContentByN()
+     {
+        for(let i=1;i<=contentArr.length;i++)
+        {
+            contentArr[i]=(i+1)+")"+contentArr[i];
+        }
+     }
+
+     function modifiContentByB()
+     {
+        let count=1;
+        for(let i=1;i<=contentArr.length;i++)
+        {
+            if(contentArr[i]!="")
+            {
+                contentArr[i]=count+")"+contentArr[i];
+                count++;
+            }
+        }
+     }
+     console.log(contentArr);
