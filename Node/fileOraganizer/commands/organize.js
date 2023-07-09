@@ -40,10 +40,55 @@ function organize(srcPath)
     for(let i=0;i<allFiles.length;i++)
     {
         // let ext=allFiles[i].split(".")[1];
-        let ext=path.extname(allFiles[i]);
-        console.log(ext);
+        // let ext=path.extname(allFiles[i]);
+        // console.log(ext);
+        let fullPathFile=path.join(srcPath,allFiles[i]);
+        // console.log(fullPathFile);
+        
+        //1. check if it is a file or folder
+        //lstatsync gives the information regarding the link provided 
+        let isFile=fs.lstatSync(fullPathFile).isFile();
+        console.log(allFiles[i]+""+isFile);
+        if(isFile)
+        {
+             //1.1 get ext name
+             let ext=path.extname(allFiles[i]).split(".")[1];
+             console.log(ext);
+               //1.2 get folder name from extension
+        let folderName=getFolderName(ext);// 
+        // console.log(folderName);
+        //copy from src folder (srcPath) ans paste in dest folder(folder_name e.g. document,media atc)
+                       //copykro kyakro   paste
+        copyFileToDest(srcPath,fullPathFile ,folderName);
+        }
     }
-
+ }
+ function getFolderName(ext)
+ {
+     for(let key in types)
+     {
+         for(let i=0;i<types[key].length;i++)
+         {
+             if(types[key][i]==ext)
+             {
+                 return key;
+             }
+         }
+     }
+ }
+ function copyFileToDest(srcPath,fullPathFile,folderName)
+ {
+        //1. folderName ka path banana hai
+        let destFolderPath=path.join(srcPath,"organized_files",folderName)
+        if(!fs.existsSync(destFolderPath))
+        {
+            fs.mkdirSync(destFolderPath);
+        }
+        // 3. copy file from src to dest folder
+        let fileName=path.basename(fullPathFile); //abc.zip
+        let destFileName=path.join(destFolderPath,fileName);
+                         // src        des
+        fs.copyFileSync(fullPathFile,destFileName);
  }
 let srcPath="C:/Users/Hp/Desktop/learnjs/Node/fileOraganizer/downloads";
 organize(srcPath);
