@@ -18,8 +18,8 @@ switch(command)
     //call oraganize function
     break;
     case "help":
-        helpFunc.help();
-        // console.log("help function called and executed successfully"+path);
+        // helpFunc.help();
+        console.log("help function called and executed successfully"+path);
     // call help function
     
     break;
