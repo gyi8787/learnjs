@@ -88,6 +88,7 @@ for(let i=0;i<contentArr.length;i++)
     }
 }
 console.log("data after removing extra lines\n",tempArr);
+contentArr=tempArr;
 }
 
 
@@ -96,7 +97,7 @@ console.table(contentArr);
 // ====================================================
 
 // kahani -n,-b,-s ki ,ki  kaun phle aayega
-contentArr=tempArr;
+
 let indexOfN=optionsArr.indexOf("-n");
 let indexOfB=optionsArr.indexOf("-b");
 // if -n or -b is not found ,-1 is returned 
