@@ -90,5 +90,8 @@ function organize(srcPath)
                          // src        des
         fs.copyFileSync(fullPathFile,destFileName);
  }
-let srcPath="C:/Users/Hp/Desktop/learnjs/Node/fileOraganizer/downloads";
-organize(srcPath);
+// let srcPath="C:/Users/Hp/Desktop/learnjs/Node/fileOraganizer/downloads";
+// organize(srcPath);
+module.exports={
+    organize:organize
+}
